@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.header {
+  padding: 20px 0;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.nav a {
+  margin-left: 30px;
+  text-decoration: none;
+  color: #333;
+}
+.about {
+  margin-top: 60px; /* было 40 у section → станет заметно ниже */
+}
+
+.about__text p:first-of-type {
+  font-weight: bold;
+}
+.status {
+  display: flex;
+  align-items: center; /* ВАЖНО: ровное выравнивание */
+  gap: 8px;
+  margin-top: 24px; /* опускаем вниз */
+}
+
+.status__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 12px;
+  height: 12px;
+  background: #59c740;
+  color: white;
+  border-radius: 50%;
+  font-size: 7px;
+  flex-shrink: 0; /* чтобы не сжимался */
+}
+.card {
+  display: flex;
+  background: #f8f8f8;
+  border-radius: 10px;
+  overflow: hidden;
+  font-size: 12px;
+}
+
+.card img {
+  width: 150px;
+  object-fit: cover;
+}
+
+.card__content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.status--red {
+  color: red;
+}
+
+.card button {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.catalog-btn {
+  margin: 30px auto;
+  display: block;
+  padding: 12px 20px;
+  background: #333;
+  color: white;
+  border-radius: 8px;
+}
+.about__inner {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+  align-items: stretch;
+}
+
+.about__images {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Добавьте это, чтобы контейнер занимал всю доступную ширину */
+}
+
+.about__images > img:first-child {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.about h2 {
+  margin-top: 0; /* убираем лишнее */
+  margin-bottom: 30px;
+}
+.about__small {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  width: 100%;
+}
+.about__small img {
+  width: calc(50% - 5px); /* 50% минус половина от gap (10px / 2 = 5px) */
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.about__text ul {
+  margin: 20px 0;
+}
+
+.about__text button {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.about__text li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.about__text li::before {
+  content: "✔";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+  background: #e16b39;
+  color: white;
+  border-radius: 50%;
+  font-size: 11px;
+  margin-top: 3px;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+section {
+  margin-top: 40px;
+}
+h2 {
+  margin-bottom: 20px;
+}
+.about__text {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+}
+
+.about__text button {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+
+  align-self: flex-start; /* 👈 прижать влево */
+  margin-top: auto;
+}
+
+.about__images,
+.about__text {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+}
